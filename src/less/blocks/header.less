@@ -1,0 +1,57 @@
+.main-nav {
+  padding: 50px 3%;
+
+  .main-nav-ls {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.main-nav-ls {
+  a:hover {
+    transition: all .2s;
+
+    color: #e35362;
+  }
+
+  .main-nav-item {
+    text-decoration: underline;
+
+    color: #000000;
+
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  .main-nav-tel {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #e35362;
+
+    font-weight: 700;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -60px;
+
+      width: 44px;
+      height: 43px;
+      margin: auto;
+
+      content: '';
+
+      background: url(../img/tel-icon.svg) no-repeat;
+    }
+  }
+}

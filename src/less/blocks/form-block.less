@@ -1,0 +1,134 @@
+.form-block {
+  display: flex;
+
+  padding: 0 3%;
+
+  color: #ffffff;
+  background-color: #e15565;
+
+  justify-content: space-between;
+  align-items: baseline;
+
+  .left-flex-item {
+    flex-basis: 60%;
+  }
+
+  .right-flex-item {
+    flex-basis: 18.5%;
+
+  }
+
+  .form-block-title {
+    padding-bottom: 80px;
+
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+
+  .advantages-ls {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+
+    list-style: none;
+
+    justify-content: space-between;
+
+      li {
+        position: relative;
+
+        &:nth-child(1)::before {
+          position: absolute;
+          top: -80px;
+          right: 0;
+          left: 0;
+
+          width: 70px;
+          height: 73px;
+          margin: auto;
+
+          content: '';
+
+          background: url(../img/diagnosis.svg) no-repeat;
+        }
+
+        &:nth-child(2)::before {
+          position: absolute;
+          top: -80px;
+          right: 0;
+          left: 0;
+
+          width: 70px;
+          height: 73px;
+          margin: auto;
+
+          content: '';
+
+          background: url(../img/garanty.png) no-repeat;
+        }
+
+        &:nth-child(3)::before {
+          position: absolute;
+          top: -80px;
+          right: 0;
+          left: 0;
+
+          width: 70px;
+          height: 73px;
+          margin: auto;
+
+          content: '';
+
+          background: url(../img/olds.svg) no-repeat;
+        }
+      }
+  }
+}
+
+.main-form {
+  .form-title {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  p {
+    margin: 0;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  input {
+    min-height: 40px;
+    padding-left: 5%;
+
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    background: none;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 20px;
+
+    cursor: pointer;
+    transition: all .3s;
+
+    background-color: #fcc749;
+
+    .global-btn();
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
