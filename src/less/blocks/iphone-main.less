@@ -1,0 +1,18 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  @media (max-width: @tablets) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .services-accordion {
+    padding-left: 5%;
+  }
+
+  .service-descrip {
+    flex-basis: 700px;
+  }
+}

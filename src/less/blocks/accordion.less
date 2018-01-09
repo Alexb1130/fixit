@@ -1,0 +1,40 @@
+.accordion-title {
+  transition: .5s;
+
+  li {
+    margin: 10px 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  
+  .ls-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.88px;
+
+    @media (max-width: @sm-phones) {
+      .title-h2-sm-phones();
+    }
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+
+    .accordion-active-item {
+      color: @main-color;
+    }
+  }
+
+  &.active {
+    color: @main-color;
+  }
+
+  &.active .accordion-content {
+    max-height: 2000px;
+    transition: 1.5s;
+  }
+}

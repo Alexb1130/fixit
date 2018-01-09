@@ -1,0 +1,130 @@
+.howwework {
+
+  .howwework-title {
+    margin: 50px 0;
+    text-align: center;
+
+    @media (max-width: @tablets) {
+      margin: 30px 0;
+      .title-h1-tablets();
+    }
+
+    @media (max-width: @md-phones) {
+      margin: 20px 0;
+      .title-h1-md-phones();
+    }
+  }
+
+  .howwework-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .howwework-item {
+    display: flex;
+    position: relative;
+    min-height: 360px;
+    flex-direction: column;
+    flex-basis: 360px;
+    padding-top: 140px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: @gray-bg;
+
+    @media (max-width: @md-phones) {
+      min-height: 330px;
+    }
+
+    &.item-two {
+      @media (max-width: @md-phones) {
+        margin: 15px 0;
+      }
+    }
+
+    &.item-one::before {
+      content: '';
+      position: absolute;
+      width: 85px;
+      height: 82px;
+      top: 50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: url(../img/tel.png) no-repeat;
+    }
+
+    &.item-one::after {
+      content: '1';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      font-size: 50px;
+      padding-top: 17px;
+      top: 0;
+      right: 50px;
+      margin: auto;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: @main-color;
+    }
+
+    &.item-two::before {
+      content: '';
+      position: absolute;
+      width: 85px;
+      height: 82px;
+      top: 50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: url(../img/magnifier.png) no-repeat;
+    }
+
+    &.item-two::after {
+      content: '2';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      padding-top: 17px;
+      top: 0;
+      right: 50px;
+      margin: auto;
+      font-size: 50px;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: @main-color;
+    }
+
+    &.item-three::before {
+      content: '';
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 85px;
+      height: 82px;
+      background: url(../img/target.png) no-repeat;
+    }
+
+    &.item-three::after {
+      content: '3';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      padding-top: 17px;
+      top: 0;
+      right: 50px;
+      margin: auto;
+      font-size: 50px;
+      border-radius: 50%;
+      color: #ffffff;
+      background-color: @main-color;
+    }
+
+    .howwework-item-title {
+      margin: 0;
+    }
+  }
+}

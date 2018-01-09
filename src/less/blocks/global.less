@@ -9,18 +9,43 @@ html {
 body {
   margin: 0;
   padding: 0;
-
   color: #000000;
   background-color: #ffffff;
-
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
+
+  @media (max-width: @md-phones) {
+    font-size: 13px;
+    line-height: 19.5px;
+  }
 }
 
 .container {
   width: 90%;
   max-width: 1170px;
   margin: auto;
+}
+
+.main-ls,
+.ls-items {
+  .ls-reset();
+
+  a {
+    color: #000000;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
 }

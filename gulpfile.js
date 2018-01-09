@@ -1,10 +1,10 @@
 'use strict';
 
-var gulp     = require('gulp'),
-    brSync   = require('browser-sync'),
+var gulp = require('gulp'),
+    brSync = require('browser-sync'),
     pngquant = require('imagemin-pngquant'),
-    del      = require('del'),
-    glp      = require('gulp-load-plugins')();
+    del = require('del'),
+    glp = require('gulp-load-plugins')();
 
 gulp.task('less', function() {
   return gulp.src('src/less/main.less')
@@ -12,7 +12,7 @@ gulp.task('less', function() {
     .pipe(glp.autoprefixer({
       browsers: ['last 2 versions']
     }))
-    // .pipe(glp.csso())
+    .pipe(glp.csso())
     .pipe(glp.rename('style.min.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(brSync.reload({stream: true}))
@@ -23,13 +23,6 @@ gulp.task('htmlBuild', function () {
       .pipe(glp.rigger())
       .pipe(gulp.dest('build'))
       .pipe(brSync.reload({ stream: true }))
-});
-
-gulp.task('scripts', function() {
-  return gulp.src('src/libs/jquery/dist/jquery.min.js')
-    .pipe(glp.concat('libs.min.js'))
-    .pipe(glp.uglifyjs())
-    .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('jsBuild', function () {
@@ -66,7 +59,7 @@ gulp.task('brSync', function() {
   });
 });
 
-gulp.task('watch', ['brSync', 'less', 'fonts', 'img', 'scripts', 'jsBuild', 'htmlBuild'], function() {
+gulp.task('watch', ['brSync', 'less', 'fonts', 'img', 'jsBuild', 'htmlBuild'], function() {
   gulp.watch('src/less/**/*.less', ['less']);
   gulp.watch('src/**/*.html', ['htmlBuild']);
   gulp.watch('src/js/**/*.js', ['jsBuild']);
